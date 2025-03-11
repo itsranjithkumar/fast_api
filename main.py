@@ -7,7 +7,7 @@ app = FastAPI()
 # Function to call the '/' endpoint
 async def call_root_endpoint():
     async with httpx.AsyncClient() as client:
-        response = await client.get("http://localhost:8000/")
+        response = await client.get("https://fast-api-10yx.onrender.com/")
         print(response.json())  # Prints the response to the console
 
 # Background job to call the root endpoint every 10 minutes
