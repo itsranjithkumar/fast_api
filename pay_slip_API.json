@@ -1,0 +1,76 @@
+{
+    "info": {
+        "name": "Pay Slip API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Submit Pay Slip",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8000/submit-payslip",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8000",
+                    "path": ["submit-payslip"]
+                },
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "name",
+                            "value": "John Doe",
+                            "type": "text",
+                            "description": "Student's full name"
+                        },
+                        {
+                            "key": "email",
+                            "value": "your.email@example.com",
+                            "type": "text",
+                            "description": "Valid email address where the pay slip will be sent"
+                        },
+                        {
+                            "key": "student_id",
+                            "value": "STU2025123",
+                            "type": "text",
+                            "description": "Student ID number"
+                        },
+                        {
+                            "key": "department",
+                            "value": "Computer Science",
+                            "type": "text",
+                            "description": "Department name"
+                        },
+                        {
+                            "key": "year",
+                            "value": "2025",
+                            "type": "text",
+                            "description": "Academic year"
+                        },
+                        {
+                            "key": "amount",
+                            "value": "5000",
+                            "type": "text",
+                            "description": "Payment amount"
+                        },
+                        {
+                            "key": "payment_date",
+                            "value": "2025-03-12",
+                            "type": "text",
+                            "description": "Date of payment (YYYY-MM-DD)"
+                        },
+                        {
+                            "key": "purpose",
+                            "value": "Semester Fee",
+                            "type": "text",
+                            "description": "Purpose of payment"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}

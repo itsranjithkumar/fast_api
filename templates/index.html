@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pay Slip System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .api-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        code {
+            background: #e9ecef;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pay Slip API Documentation</h1>
+    
+    <div class="api-info">
+        <h2>API Endpoint</h2>
+        <p>POST /submit-payslip</p>
+        
+        <h2>Required Form Fields</h2>
+        <ul>
+            <li><code>name</code>: Student's full name</li>
+            <li><code>email</code>: Valid email address</li>
+            <li><code>student_id</code>: Student ID number</li>
+            <li><code>department</code>: Department name</li>
+            <li><code>year</code>: Academic year</li>
+            <li><code>amount</code>: Payment amount (number)</li>
+            <li><code>payment_date</code>: Date of payment (YYYY-MM-DD)</li>
+            <li><code>purpose</code>: Purpose of payment</li>
+        </ul>
+
+        <h2>Response</h2>
+        <p>On success, returns:</p>
+        <pre><code>{
+    "message": "Pay slip submitted successfully and sent to email"
+}</code></pre>
+    </div>
+</body>
+</html>

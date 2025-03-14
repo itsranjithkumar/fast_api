@@ -23,3 +23,8 @@ async def startup_event():
 @app.get("/")
 def read_root():
     return {"message": "Hello, World!"}
+
+@app.get("/slip")
+def read_root():
+    return {"message": "Hello, World!"}
+

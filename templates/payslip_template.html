@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pay Slip</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .details {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            border-bottom: 1px solid #eee;
+            padding: 5px 0;
+        }
+        .label {
+            font-weight: bold;
+            color: #34495e;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">PAYMENT SLIP</div>
+        <div>Generated on: {{ generated_date }}</div>
+    </div>
+
+    <div class="details">
+        <div class="row">
+            <span class="label">Name:</span>
+            <span>{{ name }}</span>
+        </div>
+        <div class="row">
+            <span class="label">Student ID:</span>
+            <span>{{ student_id }}</span>
+        </div>
+        <div class="row">
+            <span class="label">Department:</span>
+            <span>{{ department }}</span>
+        </div>
+        <div class="row">
+            <span class="label">Year:</span>
+            <span>{{ year }}</span>
+        </div>
+        <div class="row">
+            <span class="label">Amount:</span>
+            <span>₹{{ amount }}</span>
+        </div>
+        <div class="row">
+            <span class="label">Purpose:</span>
+            <span>{{ purpose }}</span>
+        </div>
+        <div class="row">
+            <span class="label">Payment Date:</span>
+            <span>{{ payment_date }}</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>This is a computer-generated document. No signature required.</p>
+    </div>
+</body>
+</html>
